@@ -33,7 +33,10 @@ describe('backend-express-template routes', () => {
     });
   });
 
-  it('should log a user out/delete a cookie', async () => {});
+  it('should log a user out/delete a cookie', async () => {
+    const res = await request(app).delete('/api/v1/github/sessions');
+    expect(res.body.message).toEqual('Signed out successfully!');
+  });
 
   afterAll(() => {
     pool.end();
