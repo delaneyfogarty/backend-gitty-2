@@ -33,6 +33,8 @@ describe('backend-express-template routes', () => {
     });
   });
 
+  it('should log a user out/delete a cookie', async () => {});
+
   afterAll(() => {
     pool.end();
   });
